@@ -14,17 +14,18 @@
     "type": "git",
     "url": "git+https://github.com/vinniewrote/star-wars-uptake.git"
   },
-  "keywords": [
-    "react",
-    "express",
-    "webpack",
-    "es2015",
-    "javascript"
-  ],
   "dependencies": {
     "express": "^4.13.4",
-    "react": "^0.14.8",
-    "react-dom": "^0.14.8"
+    "re-base": "^2.7.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "react-router-redux": "^4.0.6",
+    "redux": "^3.5.2",
+    "redux-localstorage": "^0.4.1",
+    "redux-thunk": "^2.1.0",
+    "xmljson": "^0.2.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",
@@ -44,5 +45,13 @@
     "cross-env": "^3.1.3",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
-  }
+  },
+  "keywords": [
+    "react",
+    "express",
+    "webpack",
+    "es2015",
+    "javascript",
+    "starwars"
+  ],
 }
