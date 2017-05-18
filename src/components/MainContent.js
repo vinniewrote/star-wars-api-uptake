@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 
-const MainContent = React.createClass({
+class MainContent extends React.Component {
   render() {
     return (
         <div className='cardBlock'>
@@ -10,6 +10,6 @@ const MainContent = React.createClass({
         </div>
     )
   }
-});
+}
 
 export default MainContent;

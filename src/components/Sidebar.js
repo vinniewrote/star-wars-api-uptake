@@ -1,15 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Fav from './FavCharacter';
+import Boo from './LeastFavCharacter';
+import Crawl from './OpeningCrawl';
 
-
-const Sidebar = React.createClass({
+class Sidebar extends React.Component {
   render() {
     return (
-        <aside className='sidebar'>
-
-        </aside>
+        <div className='sidebar'>
+          <Fav />
+          <Boo />
+        </div>
     )
   }
-});
+}
 
 export default Sidebar;

@@ -1,14 +1,15 @@
 import React from 'react';
 
 
-const LeastFavCharacter = React.createClass({
+class LeastFavCharacter extends React.Component {
   render() {
     return (
-        <div className='leastFavorite'>
+        <div className='leastFav sidebarMod'>
           <h3>Least Favorite Character</h3>
+          <p>Darth Maul</p>
         </div>
     )
   }
-});
+}
 
 export default LeastFavCharacter;

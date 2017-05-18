@@ -1,5 +1,7 @@
 import React from 'react';
 import MovieCard from './MovieCard'
+import Sidebar from './Sidebar'
+import OpeningCrawl from './OpeningCrawl'
 import superagent from 'superagent'
 import _ from 'lodash'
 
@@ -10,7 +12,6 @@ class Layout extends React.Component {
   }
 
   componentDidMount() {
-    console.log('about to call api');
     const filmsUrl = 'http://swapi.co/api/films/';
     const characterUrl ="http://swapi.co/api/people/";
     superagent.get(filmsUrl).then((response) => {
@@ -19,25 +20,26 @@ class Layout extends React.Component {
         films: response.body.results
       });
     });
-
-    superagent.get(characterUrl).then((response) => {
-      console.log(response);
-    });
   }
 
   render(){
     const films = _.map(this.state.films, (film) => {
       return <div className='cardBlock'><p>{film.title}</p><p>{film.director}</p><p>{film.characters[0]}</p><p>{film.characters[1]}</p><p>{film.characters[2]}</p></div>
-
+    });
+    const crawls = _.map(this.state.films, (crawl, i) => {
+    return <tr className="filmCrawl" key={i}><th scope="row">{crawl.title}</th><td data-film={crawl.episode_id} className=" bar"><p>{crawl.opening_crawl.length}</p></td></tr>
     });
     return(
       <div className='swContainer'>
-        <div>{films}</div>
+        <main className='filmGroup'>{films}</main>
+
+        <aside>
+          <Sidebar />
+          <div className='crawlChart sidebarMod'><h3>How long are these Opening Crawls?</h3> <table id="sw-graph"><tbody>{crawls}</tbody></table></div>
+        </aside>
       </div>
     );
   }
-
-
 }
 
 
