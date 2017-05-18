@@ -17,15 +17,8 @@
   "dependencies": {
     "express": "^4.13.4",
     "lodash": "^4.17.4",
-    "re-base": "^2.7.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
-    "react-redux": "^4.4.5",
-    "react-router": "^2.8.1",
-    "react-router-redux": "^4.0.6",
-    "redux": "^3.5.2",
-    "redux-localstorage": "^0.4.1",
-    "redux-thunk": "^2.1.0",
     "superagent": "^3.5.2",
     "xmljson": "^0.2.0"
   },

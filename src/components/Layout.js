@@ -20,6 +20,12 @@ class Layout extends React.Component {
         films: response.body.results
       });
     });
+    superagent.get(characterUrl).then((data) => {
+      console.log(data.body.results);
+      this.setState({
+        people: data.body.results
+      });
+    });
   }
 
   render(){
