@@ -1,18 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router';
+import Layout from './Layout'
 
-
-const MovieCard = React.createClass({
+class MovieCard extends React.Component {
   render() {
+const {entry, i, film} = this.props;
+
     return (
         <div className='card'>
           <div className='poster'></div>
-          <div className='movieTitle'></div>
+          <div className='movieTitle'>{film}</div>
           <div className='movieDirector'></div>
           <div className='movieCharacters'></div>
         </div>
     )
   }
-});
+}
 
 export default MovieCard;
